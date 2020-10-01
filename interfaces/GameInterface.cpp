@@ -4,14 +4,23 @@
 
 class GameInterface {
     public:
-        virtual void getMaxPlayers() = 0;
-        virtual void setMaxPlayers() = 0;
+        // Returns max number of players that can play this game
+        int getMaxPlayers()
+        {
+            return maxPlayers;
+        }
+
+        // Returns min number of players needed to play this game
+        int getMinPlayers(){
+            return minPlayers;
+        }
 
 
     protected:
 
         //Protected member variables
-        int MaxPlayers;
+        int maxPlayers;
+        int minPlayers;
 
 
 };
